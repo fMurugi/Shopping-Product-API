@@ -15,8 +15,9 @@ public class ProductController {
     public List<ProductModel> getAllProducts(){
         return service.getAllProducts();
     }
-    @GetMapping("/products/{id}")
-        public ProductModel getProduct(@PathVariable Integer Id){
+    @GetMapping("/products/{Id}")
+        public Optional<ProductModel> getProduct(@PathVariable Integer Id){
+
         return service.getProduct(Id);
     }
 //    @DeleteMapping("/products/{id}")
